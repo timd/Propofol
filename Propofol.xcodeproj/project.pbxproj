@@ -117,11 +117,8 @@
 		22C15964160DD3570067B4A5 /* Propofol */ = {
 			isa = PBXGroup;
 			children = (
-				22C1596D160DD3570067B4A5 /* CMAppDelegate.h */,
-				22C1596E160DD3570067B4A5 /* CMAppDelegate.m */,
-				22C15976160DD3570067B4A5 /* CMViewController.h */,
-				22C15977160DD3570067B4A5 /* CMViewController.m */,
-				22C15979160DD3570067B4A5 /* CMViewController.xib */,
+				22C1599A160DD3E20067B4A5 /* Front end */,
+				22C15999160DD3D60067B4A5 /* App delegate */,
 				22C15965160DD3570067B4A5 /* Supporting Files */,
 			);
 			path = Propofol;
@@ -158,6 +155,33 @@
 				22C1598B160DD3570067B4A5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22C15999160DD3D60067B4A5 /* App delegate */ = {
+			isa = PBXGroup;
+			children = (
+				22C1596D160DD3570067B4A5 /* CMAppDelegate.h */,
+				22C1596E160DD3570067B4A5 /* CMAppDelegate.m */,
+			);
+			name = "App delegate";
+			sourceTree = "<group>";
+		};
+		22C1599A160DD3E20067B4A5 /* Front end */ = {
+			isa = PBXGroup;
+			children = (
+				22C1599B160DD3E90067B4A5 /* Vitals */,
+			);
+			name = "Front end";
+			sourceTree = "<group>";
+		};
+		22C1599B160DD3E90067B4A5 /* Vitals */ = {
+			isa = PBXGroup;
+			children = (
+				22C15976160DD3570067B4A5 /* CMViewController.h */,
+				22C15977160DD3570067B4A5 /* CMViewController.m */,
+				22C15979160DD3570067B4A5 /* CMViewController.xib */,
+			);
+			name = Vitals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

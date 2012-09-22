@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMViewController : UIViewController
+@interface CMViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UIPickerView *heightPicker;
+@property (strong, nonatomic) IBOutlet UIPickerView *weightPicker;
+@property (strong, nonatomic) IBOutlet UIPickerView *agePicker;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *genderControl;
+- (IBAction)didTapNextButton:(id)sender;
 
 @end
