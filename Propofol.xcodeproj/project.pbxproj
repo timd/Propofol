@@ -26,6 +26,7 @@
 		22C159A1160DD8FC0067B4A5 /* CMConcentrationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C1599F160DD8FC0067B4A5 /* CMConcentrationView.xib */; };
 		22C159A3160DD9320067B4A5 /* CMVitalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C159A2160DD9320067B4A5 /* CMVitalsViewController.m */; };
 		22C159A7160DD9740067B4A5 /* CMBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C159A6160DD9740067B4A5 /* CMBaseNavController.m */; };
+		22C159AB160DDE480067B4A5 /* CMCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C159AA160DDE480067B4A5 /* CMCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		22C159A2160DD9320067B4A5 /* CMVitalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMVitalsViewController.m; sourceTree = "<group>"; };
 		22C159A5160DD9740067B4A5 /* CMBaseNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBaseNavController.h; sourceTree = "<group>"; };
 		22C159A6160DD9740067B4A5 /* CMBaseNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBaseNavController.m; sourceTree = "<group>"; };
+		22C159A9160DDE480067B4A5 /* CMCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCalculator.h; sourceTree = "<group>"; };
+		22C159AA160DDE480067B4A5 /* CMCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCalculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				22C15999160DD3D60067B4A5 /* App delegate */,
+				22C159A8160DDE2F0067B4A5 /* Calculator */,
 				22C1599A160DD3E20067B4A5 /* Front end */,
 				22C15965160DD3570067B4A5 /* Supporting Files */,
 			);
@@ -203,6 +207,15 @@
 				22C1599F160DD8FC0067B4A5 /* CMConcentrationView.xib */,
 			);
 			name = Concentration;
+			sourceTree = "<group>";
+		};
+		22C159A8160DDE2F0067B4A5 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				22C159A9160DDE480067B4A5 /* CMCalculator.h */,
+				22C159AA160DDE480067B4A5 /* CMCalculator.m */,
+			);
+			name = Calculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +335,7 @@
 				22C159A0160DD8FC0067B4A5 /* CMConcentrationViewController.m in Sources */,
 				22C159A3160DD9320067B4A5 /* CMVitalsViewController.m in Sources */,
 				22C159A7160DD9740067B4A5 /* CMBaseNavController.m in Sources */,
+				22C159AB160DDE480067B4A5 /* CMCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

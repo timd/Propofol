@@ -8,6 +8,8 @@
 
 #import "CMConcentrationViewController.h"
 
+#import "CMCalculator.h"
+
 #define kUnitPicker 100
 #define kDecimalPicker 200
 

@@ -9,6 +9,8 @@
 #import "CMVitalsViewController.h"
 #import "CMConcentrationViewController.h"
 
+#import "CMCalculator.h"
+
 #define kAgePickerTag 300
 #define kWeightPickerTag 200
 #define kHeightPickerTag 100
