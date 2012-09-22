@@ -13,6 +13,10 @@
 @property (nonatomic, strong) CPTXYGraph *graph;
 @property (nonatomic, strong) NSMutableArray *dataForPlot;
 
+@property (strong, nonatomic) IBOutlet CPTGraphHostingView *graphView;
+@property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, strong) NSTimer *heartbeat;
+
 @end
 
 @implementation CMGraphViewController
@@ -37,6 +41,7 @@
     CPTGraphHostingView *hostingView = (CPTGraphHostingView *)self.graphView;
     //hostingView.collapsesLayers = NO; // Setting to YES reduces GPU memory usage, but can slow drawing/scrolling
     hostingView.hostedGraph     = self.graph;
+    [hostingView setUserInteractionEnabled:YES];
     
     self.graph.paddingLeft   = 10.0;
     self.graph.paddingTop    = 10.0;
@@ -52,10 +57,10 @@
     CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *)self.graph.defaultPlotSpace;
     plotSpace.allowsUserInteraction = YES;
     plotSpace.xRange                = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(200.0)];
-    plotSpace.yRange                = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(20.0)];
+    plotSpace.yRange                = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(15)];
     
-    [plotSpace setGlobalXRange:[CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(60)]];
-    [plotSpace setGlobalYRange:[CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(60)]];
+    [plotSpace setGlobalXRange:[CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(25)]];
+    [plotSpace setGlobalYRange:[CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(15)]];
     
     // Axes
     CPTXYAxisSet *axisSet = (CPTXYAxisSet *)self.graph.axisSet;
@@ -128,26 +133,68 @@
      
 
     // Add some initial data
-    NSMutableArray *contentArray = [NSMutableArray arrayWithCapacity:100];
-    NSUInteger i;
-    for ( i = 0; i < 101; i++ ) {
+    self.dataForPlot = [[NSMutableArray alloc] init];
+    NSDictionary *initialData = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithInt:0], @"x", [NSNumber numberWithInt:0], @"y", nil];
+    [self.dataForPlot addObject:initialData];
+    
+    self.heartbeat = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(doSomethingTimed) userInfo:nil repeats:YES];
+    
+}
+
+-(void)doSomethingTimed {
+    
+    // Recalc the data
+    NSDictionary *lastValue = [self.dataForPlot lastObject];
+    
+    int lastXValue = [[lastValue objectForKey:@"x"] intValue];
+    
+    int newXValue = lastXValue + 1;
+    
+    int newYValue = (newXValue % 10);
+    
+    NSDictionary *newDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                   [NSNumber numberWithInt:newXValue], @"x",
+                                   [NSNumber numberWithInt:newYValue], @"y",
+                                    nil];
+    
+    
+    
+    [self.dataForPlot addObject:newDictionary];
+    
+    int dataPointCount = [self.dataForPlot count];
+    
+    /*
+            x   x   x   x   x   x
+                    0   5   10  15
+                0   5   10  15  20
+            0   5   10  15  20  25
+            5   10  15  20  25  30
+     
+     
+    */
+
+    if (dataPointCount > 15) {
         
+        float newXorigin = dataPointCount -15;
+
+        CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *)self.graph.defaultPlotSpace;
         
+        CPTMutablePlotRange *mutablePlotXRange = (CPTMutablePlotRange *)plotSpace.globalXRange;
+        mutablePlotXRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(newXorigin) length:CPTDecimalFromFloat(15.0)];
         
+        CPTXYAxisSet *axisSet = (CPTXYAxisSet *)self.graph.axisSet;
+        CPTXYAxis *y          = axisSet.yAxis;
+        y.orthogonalCoordinateDecimal = CPTDecimalFromFloat(newXorigin);// CPTDecimalFromString(@"0");
         
-        id x = [NSNumber numberWithFloat:i];
-        id y = [NSNumber numberWithFloat:10.0f];
+        [plotSpace setXRange:mutablePlotXRange];
+        [plotSpace setGlobalXRange:mutablePlotXRange];
         
-        //id x = [NSNumber numberWithFloat:1 + i * 0.05];
-        //id y = [NSNumber numberWithFloat:1.2 * rand() / (float)RAND_MAX + 1.2];
-        [contentArray addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:x, @"x", y, @"y", nil]];
+        NSLog(@"plotRange = %@", mutablePlotXRange);
+
     }
     
-    self.dataForPlot = contentArray;
-    
-#ifdef PERFORMANCE_TEST
-    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(changePlotRange) userInfo:nil repeats:YES];
-#endif
+    // Replot the graph
+    [self.graph reloadData];
     
 }
 
@@ -168,15 +215,29 @@
 -(NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index
 {
     NSString *key = (fieldEnum == CPTScatterPlotFieldX ? @"x" : @"y");
+    
     NSNumber *num = [[self.dataForPlot objectAtIndex:index] valueForKey:key];
     
     // Green plot gets shifted above the blue
     if ( [(NSString *)plot.identifier isEqualToString:@"Green Plot"] ) {
+        
         if ( fieldEnum == CPTScatterPlotFieldY ) {
-            num = [NSNumber numberWithDouble:[num doubleValue] + 1.0];
+            num = [NSNumber numberWithInt:5];
         }
     }
+    
     return num;
 }
 
+- (IBAction)didTapStopButton:(id)sender {
+    
+    if ([self.heartbeat isValid]) {
+        [self.heartbeat invalidate];
+        [self.toggleButton setTitle:@"Start" forState:UIControlStateNormal];
+    } else {
+        self.heartbeat = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(doSomethingTimed) userInfo:nil repeats:YES];
+        [self.toggleButton setTitle:@"Stop" forState:UIControlStateNormal];
+    }
+
+}
 @end

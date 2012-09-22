@@ -11,6 +11,8 @@
 
 @interface CMGraphViewController : UIViewController <CPTPlotDataSource>
 
-@property (strong, nonatomic) IBOutlet CPTGraphHostingView *graphView;
+- (IBAction)didTapStopButton:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *toggleButton;
+
 
 @end
