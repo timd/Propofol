@@ -59,6 +59,9 @@
         [self.heightArray addObject:[NSNumber numberWithInt:height]];
     }
     
+    // Setup gender control
+    [self.genderControl addTarget:self action:@selector(didChangeGenderValue) forControlEvents:UIControlEventValueChanged];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -142,6 +145,12 @@
         default:
             break;
     }
+    
+}
+
+-(void)didChangeGenderValue {
+    
+    [self.calculator setGender:[self.genderControl selectedSegmentIndex]];
     
 }
 
