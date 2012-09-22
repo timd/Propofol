@@ -6,14 +6,15 @@
 //  Copyright (c) 2012 Charismatic Megafauna Ltd. All rights reserved.
 //
 
-#import "CMViewController.h"
+#import "CMVitalsViewController.h"
+#import "CMConcentrationViewController.h"
 
 #define kAgePickerTag 300
 #define kWeightPickerTag 200
 #define kHeightPickerTag 100
 
 
-@interface CMViewController ()
+@interface CMVitalsViewController ()
 
 @property (nonatomic, strong) NSMutableArray *ageArray;
 @property (nonatomic, strong) NSMutableArray *weightArray;
@@ -21,7 +22,7 @@
 
 @end
 
-@implementation CMViewController
+@implementation CMVitalsViewController
 
 - (void)viewDidLoad
 {
@@ -86,7 +87,7 @@
             break;
     }
     
-    return nil;
+    return 0;
 }
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
@@ -112,6 +113,13 @@
     return nil;
 }
 
+#pragma mark -
+#pragma mark Interaction methods
+
 - (IBAction)didTapNextButton:(id)sender {
+    
+    CMConcentrationViewController *concVC = [[CMConcentrationViewController alloc] initWithNibName:@"CMConcentrationView" bundle:nil];
+    [self.navigationController pushViewController:concVC animated:YES];
+    
 }
 @end

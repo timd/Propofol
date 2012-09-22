@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class CMViewController;
+@class CMVitalsViewController;
 
 @interface CMAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) CMViewController *viewController;
+@property (strong, nonatomic) CMVitalsViewController *viewController;
 
 @end

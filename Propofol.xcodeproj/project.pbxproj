@@ -16,13 +16,16 @@
 		22C15971160DD3570067B4A5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C15970160DD3570067B4A5 /* Default.png */; };
 		22C15973160DD3570067B4A5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C15972160DD3570067B4A5 /* Default@2x.png */; };
 		22C15975160DD3570067B4A5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C15974160DD3570067B4A5 /* Default-568h@2x.png */; };
-		22C15978160DD3570067B4A5 /* CMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C15977160DD3570067B4A5 /* CMViewController.m */; };
-		22C1597B160DD3570067B4A5 /* CMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C15979160DD3570067B4A5 /* CMViewController.xib */; };
+		22C1597B160DD3570067B4A5 /* CMVitalsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C15979160DD3570067B4A5 /* CMVitalsView.xib */; };
 		22C15983160DD3570067B4A5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C15982160DD3570067B4A5 /* SenTestingKit.framework */; };
 		22C15984160DD3570067B4A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C1595E160DD3570067B4A5 /* UIKit.framework */; };
 		22C15985160DD3570067B4A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C15960160DD3570067B4A5 /* Foundation.framework */; };
 		22C1598D160DD3570067B4A5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22C1598B160DD3570067B4A5 /* InfoPlist.strings */; };
 		22C15990160DD3570067B4A5 /* PropofolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1598F160DD3570067B4A5 /* PropofolTests.m */; };
+		22C159A0160DD8FC0067B4A5 /* CMConcentrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1599E160DD8FC0067B4A5 /* CMConcentrationViewController.m */; };
+		22C159A1160DD8FC0067B4A5 /* CMConcentrationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C1599F160DD8FC0067B4A5 /* CMConcentrationView.xib */; };
+		22C159A3160DD9320067B4A5 /* CMVitalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C159A2160DD9320067B4A5 /* CMVitalsViewController.m */; };
+		22C159A7160DD9740067B4A5 /* CMBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C159A6160DD9740067B4A5 /* CMBaseNavController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,15 +52,20 @@
 		22C15970160DD3570067B4A5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		22C15972160DD3570067B4A5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		22C15974160DD3570067B4A5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		22C15976160DD3570067B4A5 /* CMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMViewController.h; sourceTree = "<group>"; };
-		22C15977160DD3570067B4A5 /* CMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMViewController.m; sourceTree = "<group>"; };
-		22C1597A160DD3570067B4A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CMViewController.xib; sourceTree = "<group>"; };
+		22C15976160DD3570067B4A5 /* CMVitalsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMVitalsViewController.h; sourceTree = "<group>"; };
+		22C1597A160DD3570067B4A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CMVitalsView.xib; sourceTree = "<group>"; };
 		22C15981160DD3570067B4A5 /* PropofolTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PropofolTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C15982160DD3570067B4A5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		22C1598A160DD3570067B4A5 /* PropofolTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PropofolTests-Info.plist"; sourceTree = "<group>"; };
 		22C1598C160DD3570067B4A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		22C1598E160DD3570067B4A5 /* PropofolTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropofolTests.h; sourceTree = "<group>"; };
 		22C1598F160DD3570067B4A5 /* PropofolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropofolTests.m; sourceTree = "<group>"; };
+		22C1599D160DD8FC0067B4A5 /* CMConcentrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMConcentrationViewController.h; sourceTree = "<group>"; };
+		22C1599E160DD8FC0067B4A5 /* CMConcentrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMConcentrationViewController.m; sourceTree = "<group>"; };
+		22C1599F160DD8FC0067B4A5 /* CMConcentrationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMConcentrationView.xib; sourceTree = "<group>"; };
+		22C159A2160DD9320067B4A5 /* CMVitalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMVitalsViewController.m; sourceTree = "<group>"; };
+		22C159A5160DD9740067B4A5 /* CMBaseNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBaseNavController.h; sourceTree = "<group>"; };
+		22C159A6160DD9740067B4A5 /* CMBaseNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBaseNavController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +125,8 @@
 		22C15964160DD3570067B4A5 /* Propofol */ = {
 			isa = PBXGroup;
 			children = (
-				22C1599A160DD3E20067B4A5 /* Front end */,
 				22C15999160DD3D60067B4A5 /* App delegate */,
+				22C1599A160DD3E20067B4A5 /* Front end */,
 				22C15965160DD3570067B4A5 /* Supporting Files */,
 			);
 			path = Propofol;
@@ -162,6 +170,8 @@
 			children = (
 				22C1596D160DD3570067B4A5 /* CMAppDelegate.h */,
 				22C1596E160DD3570067B4A5 /* CMAppDelegate.m */,
+				22C159A5160DD9740067B4A5 /* CMBaseNavController.h */,
+				22C159A6160DD9740067B4A5 /* CMBaseNavController.m */,
 			);
 			name = "App delegate";
 			sourceTree = "<group>";
@@ -170,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				22C1599B160DD3E90067B4A5 /* Vitals */,
+				22C1599C160DD8E20067B4A5 /* Concentration */,
 			);
 			name = "Front end";
 			sourceTree = "<group>";
@@ -177,11 +188,21 @@
 		22C1599B160DD3E90067B4A5 /* Vitals */ = {
 			isa = PBXGroup;
 			children = (
-				22C15976160DD3570067B4A5 /* CMViewController.h */,
-				22C15977160DD3570067B4A5 /* CMViewController.m */,
-				22C15979160DD3570067B4A5 /* CMViewController.xib */,
+				22C15976160DD3570067B4A5 /* CMVitalsViewController.h */,
+				22C159A2160DD9320067B4A5 /* CMVitalsViewController.m */,
+				22C15979160DD3570067B4A5 /* CMVitalsView.xib */,
 			);
 			name = Vitals;
+			sourceTree = "<group>";
+		};
+		22C1599C160DD8E20067B4A5 /* Concentration */ = {
+			isa = PBXGroup;
+			children = (
+				22C1599D160DD8FC0067B4A5 /* CMConcentrationViewController.h */,
+				22C1599E160DD8FC0067B4A5 /* CMConcentrationViewController.m */,
+				22C1599F160DD8FC0067B4A5 /* CMConcentrationView.xib */,
+			);
+			name = Concentration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +281,8 @@
 				22C15971160DD3570067B4A5 /* Default.png in Resources */,
 				22C15973160DD3570067B4A5 /* Default@2x.png in Resources */,
 				22C15975160DD3570067B4A5 /* Default-568h@2x.png in Resources */,
-				22C1597B160DD3570067B4A5 /* CMViewController.xib in Resources */,
+				22C1597B160DD3570067B4A5 /* CMVitalsView.xib in Resources */,
+				22C159A1160DD8FC0067B4A5 /* CMConcentrationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +319,9 @@
 			files = (
 				22C1596B160DD3570067B4A5 /* main.m in Sources */,
 				22C1596F160DD3570067B4A5 /* CMAppDelegate.m in Sources */,
-				22C15978160DD3570067B4A5 /* CMViewController.m in Sources */,
+				22C159A0160DD8FC0067B4A5 /* CMConcentrationViewController.m in Sources */,
+				22C159A3160DD9320067B4A5 /* CMVitalsViewController.m in Sources */,
+				22C159A7160DD9740067B4A5 /* CMBaseNavController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,12 +352,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		22C15979160DD3570067B4A5 /* CMViewController.xib */ = {
+		22C15979160DD3570067B4A5 /* CMVitalsView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				22C1597A160DD3570067B4A5 /* en */,
 			);
-			name = CMViewController.xib;
+			name = CMVitalsView.xib;
 			sourceTree = "<group>";
 		};
 		22C1598B160DD3570067B4A5 /* InfoPlist.strings */ = {

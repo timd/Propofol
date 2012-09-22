@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface CMVitalsViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIPickerView *heightPicker;
 @property (strong, nonatomic) IBOutlet UIPickerView *weightPicker;

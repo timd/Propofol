@@ -8,7 +8,8 @@
 
 #import "CMAppDelegate.h"
 
-#import "CMViewController.h"
+#import "CMVitalsViewController.h"
+#import "CMBaseNavController.h"
 
 @implementation CMAppDelegate
 
@@ -16,8 +17,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[CMViewController alloc] initWithNibName:@"CMViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    CMVitalsViewController *vitalsController = [[CMVitalsViewController alloc] initWithNibName:@"CMVitalsView" bundle:nil];
+    CMBaseNavController *navController = [[CMBaseNavController alloc] initWithRootViewController:vitalsController];
+    [navController setNavigationBarHidden:YES];
+    self.window.rootViewController = navController;
+
     [self.window makeKeyAndVisible];
     return YES;
 }
