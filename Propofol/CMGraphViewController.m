@@ -17,6 +17,8 @@
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, strong) NSTimer *heartbeat;
 
+@property (nonatomic) int greenValue;
+
 @end
 
 @implementation CMGraphViewController
@@ -139,6 +141,8 @@
     
     self.heartbeat = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(doSomethingTimed) userInfo:nil repeats:YES];
     
+    self.greenValue = 5;
+    
 }
 
 -(void)doSomethingTimed {
@@ -222,7 +226,7 @@
     if ( [(NSString *)plot.identifier isEqualToString:@"Green Plot"] ) {
         
         if ( fieldEnum == CPTScatterPlotFieldY ) {
-            num = [NSNumber numberWithInt:5];
+            num = [NSNumber numberWithInt:self.greenValue];
         }
     }
     
@@ -240,4 +244,14 @@
     }
 
 }
+- (IBAction)didTapUpButton:(id)sender {
+    self.greenValue += 1;
+}
+
+- (IBAction)didTapDownButton:(id)sender {
+    if (self.greenValue > 0) {
+        self.greenValue -= 1;
+    }
+}
+
 @end

@@ -14,5 +14,7 @@
 - (IBAction)didTapStopButton:(id)sender;
 @property (strong, nonatomic) IBOutlet UIButton *toggleButton;
 
+- (IBAction)didTapUpButton:(id)sender;
+- (IBAction)didTapDownButton:(id)sender;
 
 @end
