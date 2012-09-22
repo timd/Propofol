@@ -21,6 +21,7 @@
 @property (nonatomic, strong) NSMutableArray *ageArray;
 @property (nonatomic, strong) NSMutableArray *weightArray;
 @property (nonatomic, strong) NSMutableArray *heightArray;
+@property (nonatomic, strong) CMCalculator *calculator;
 
 @end
 
@@ -30,6 +31,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // Create and load calculator
+    self.calculator = [[CMCalculator alloc] init];
+    
     
     // Setup basic stats source data
     self.ageArray = [[NSMutableArray alloc] init];
@@ -115,12 +120,42 @@
     return nil;
 }
 
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
+    switch (pickerView.tag) {
+            
+        case kAgePickerTag:
+            //
+            [self.calculator setAge:[[self.ageArray objectAtIndex:row] intValue]];
+            break;
+            
+        case kWeightPickerTag:
+            //
+            [self.calculator setWeight:[[self.weightArray objectAtIndex:row] intValue]];
+            break;
+            
+        case kHeightPickerTag:
+            //
+            [self.calculator setHeight:[[self.heightArray objectAtIndex:row] intValue]];
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
 #pragma mark -
 #pragma mark Interaction methods
 
 - (IBAction)didTapNextButton:(id)sender {
     
     CMConcentrationViewController *concVC = [[CMConcentrationViewController alloc] initWithNibName:@"CMConcentrationView" bundle:nil];
+    
+    [concVC setCalculator:self.calculator];
+    
+    [self.calculator logValues];
+    
     [self.navigationController pushViewController:concVC animated:YES];
     
 }

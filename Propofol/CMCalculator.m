@@ -19,4 +19,12 @@
     return self;
 }
 
+-(void)logValues {
+    NSLog(@"age = %d", self.age);
+    NSLog(@"height = %d", self.height);
+    NSLog(@"weight = %d", self.weight);
+    NSLog(@"gender = %d", self.gender);
+    NSLog(@"targetConcentration = %f", self.targetConcentration);
+}
+
 @end

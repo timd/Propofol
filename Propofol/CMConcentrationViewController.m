@@ -18,6 +18,9 @@
 @property (nonatomic, strong) NSMutableArray *concUnitValues;
 @property (nonatomic, strong) NSMutableArray *concDecimalValues;
 
+@property (nonatomic) int currentPickerDecimalValue;
+@property (nonatomic) int currentPickerUnitValue;
+
 @end
 
 @implementation CMConcentrationViewController
@@ -98,7 +101,38 @@
     
 }
 
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
+    switch (pickerView.tag) {
+        case kUnitPicker:
+            self.currentPickerUnitValue = [[self.concUnitValues objectAtIndex:row] intValue];
+            break;
+
+        case kDecimalPicker:
+            self.currentPickerDecimalValue = [[self.concDecimalValues objectAtIndex:row] intValue];
+            break;
+
+        default:
+            break;
+    }
+    
+    NSLog(@"unitPicker = %d", self.currentPickerUnitValue);
+    NSLog(@"decimalPicker = %d\n\n", self.currentPickerDecimalValue);
+    
+    float decimalValue = self.currentPickerDecimalValue * 0.1;
+    float concentrationValue = self.currentPickerUnitValue + decimalValue;
+    
+    NSLog(@"decimalValue = %f", decimalValue);
+    NSLog(@"concentrationValue = %f", concentrationValue);
+    
+    [self.calculator setTargetConcentration:concentrationValue];
+    
+}
+
 - (IBAction)didTapNextButton:(id)sender {
+    
+    [self.calculator logValues];
+    
 }
 
 @end

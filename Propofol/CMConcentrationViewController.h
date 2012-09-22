@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class CMCalculator;
+
 @interface CMConcentrationViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UIPickerView *concentrationPicker;
+@property (nonatomic, strong) CMCalculator *calculator;
+
+@property (strong, nonatomic) IBOutlet UIPickerView *decimalPicker;
+@property (strong, nonatomic) IBOutlet UIPickerView *unitPicker;
+
 - (IBAction)didTapNextButton:(id)sender;
 @end

@@ -10,4 +10,12 @@
 
 @interface CMCalculator : NSObject
 
+@property (nonatomic) int age;
+@property (nonatomic) int weight;
+@property (nonatomic) int height;
+@property (nonatomic) int gender;
+@property (nonatomic) float targetConcentration;
+
+-(void)logValues;
+
 @end
