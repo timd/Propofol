@@ -27,6 +27,10 @@
 		22C159A3160DD9320067B4A5 /* CMVitalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C159A2160DD9320067B4A5 /* CMVitalsViewController.m */; };
 		22C159A7160DD9740067B4A5 /* CMBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C159A6160DD9740067B4A5 /* CMBaseNavController.m */; };
 		22C159AB160DDE480067B4A5 /* CMCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C159AA160DDE480067B4A5 /* CMCalculator.m */; };
+		22E89E40160E0268003896C6 /* CMGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E89E3E160E0268003896C6 /* CMGraphViewController.m */; };
+		22E89E41160E0268003896C6 /* CMGraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E89E3F160E0268003896C6 /* CMGraphView.xib */; };
+		22E89E5B160E0318003896C6 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E89E5A160E0311003896C6 /* libCorePlot-CocoaTouch.a */; };
+		22E89E5D160E0370003896C6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E89E5C160E0370003896C6 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 22C15959160DD3560067B4A5;
 			remoteInfo = Propofol;
+		};
+		22E89E59160E0311003896C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22E89E50160E0311003896C6 /* CorePlot-CocoaTouch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC9B83470FB8A0A40035D8DA;
+			remoteInfo = "CorePlot-CocoaTouch";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -69,6 +80,11 @@
 		22C159A6160DD9740067B4A5 /* CMBaseNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBaseNavController.m; sourceTree = "<group>"; };
 		22C159A9160DDE480067B4A5 /* CMCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCalculator.h; sourceTree = "<group>"; };
 		22C159AA160DDE480067B4A5 /* CMCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCalculator.m; sourceTree = "<group>"; };
+		22E89E3D160E0268003896C6 /* CMGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGraphViewController.h; sourceTree = "<group>"; };
+		22E89E3E160E0268003896C6 /* CMGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGraphViewController.m; sourceTree = "<group>"; };
+		22E89E3F160E0268003896C6 /* CMGraphView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMGraphView.xib; sourceTree = "<group>"; };
+		22E89E50160E0311003896C6 /* CorePlot-CocoaTouch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CorePlot-CocoaTouch.xcodeproj"; path = "Frameworks/CorePlot/CorePlot-CocoaTouch.xcodeproj"; sourceTree = "<group>"; };
+		22E89E5C160E0370003896C6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E89E5D160E0370003896C6 /* QuartzCore.framework in Frameworks */,
+				22E89E5B160E0318003896C6 /* libCorePlot-CocoaTouch.a in Frameworks */,
 				22C1595F160DD3570067B4A5 /* UIKit.framework in Frameworks */,
 				22C15961160DD3570067B4A5 /* Foundation.framework in Frameworks */,
 				22C15963160DD3570067B4A5 /* CoreGraphics.framework in Frameworks */,
@@ -98,6 +116,7 @@
 		22C1594F160DD3560067B4A5 = {
 			isa = PBXGroup;
 			children = (
+				22E89E50160E0311003896C6 /* CorePlot-CocoaTouch.xcodeproj */,
 				22C15964160DD3570067B4A5 /* Propofol */,
 				22C15988160DD3570067B4A5 /* PropofolTests */,
 				22C1595D160DD3570067B4A5 /* Frameworks */,
@@ -117,6 +136,7 @@
 		22C1595D160DD3570067B4A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22E89E5C160E0370003896C6 /* QuartzCore.framework */,
 				22C1595E160DD3570067B4A5 /* UIKit.framework */,
 				22C15960160DD3570067B4A5 /* Foundation.framework */,
 				22C15962160DD3570067B4A5 /* CoreGraphics.framework */,
@@ -183,6 +203,7 @@
 		22C1599A160DD3E20067B4A5 /* Front end */ = {
 			isa = PBXGroup;
 			children = (
+				22E89E3B160E0253003896C6 /* Graphs */,
 				22C1599B160DD3E90067B4A5 /* Vitals */,
 				22C1599C160DD8E20067B4A5 /* Concentration */,
 			);
@@ -216,6 +237,24 @@
 				22C159AA160DDE480067B4A5 /* CMCalculator.m */,
 			);
 			name = Calculator;
+			sourceTree = "<group>";
+		};
+		22E89E3B160E0253003896C6 /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				22E89E3D160E0268003896C6 /* CMGraphViewController.h */,
+				22E89E3E160E0268003896C6 /* CMGraphViewController.m */,
+				22E89E3F160E0268003896C6 /* CMGraphView.xib */,
+			);
+			name = Graphs;
+			sourceTree = "<group>";
+		};
+		22E89E51160E0311003896C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22E89E5A160E0311003896C6 /* libCorePlot-CocoaTouch.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +316,12 @@
 			mainGroup = 22C1594F160DD3560067B4A5;
 			productRefGroup = 22C1595B160DD3560067B4A5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 22E89E51160E0311003896C6 /* Products */;
+					ProjectRef = 22E89E50160E0311003896C6 /* CorePlot-CocoaTouch.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				22C15959160DD3560067B4A5 /* Propofol */,
@@ -284,6 +329,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		22E89E5A160E0311003896C6 /* libCorePlot-CocoaTouch.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libCorePlot-CocoaTouch.a";
+			remoteRef = 22E89E59160E0311003896C6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		22C15958160DD3560067B4A5 /* Resources */ = {
@@ -296,6 +351,7 @@
 				22C15975160DD3570067B4A5 /* Default-568h@2x.png in Resources */,
 				22C1597B160DD3570067B4A5 /* CMVitalsView.xib in Resources */,
 				22C159A1160DD8FC0067B4A5 /* CMConcentrationView.xib in Resources */,
+				22E89E41160E0268003896C6 /* CMGraphView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +392,7 @@
 				22C159A3160DD9320067B4A5 /* CMVitalsViewController.m in Sources */,
 				22C159A7160DD9740067B4A5 /* CMBaseNavController.m in Sources */,
 				22C159AB160DDE480067B4A5 /* CMCalculator.m in Sources */,
+				22E89E40160E0268003896C6 /* CMGraphViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +496,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Propofol/Propofol-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/CorePlot/**";
 				INFOPLIST_FILE = "Propofol/Propofol-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -450,7 +509,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Propofol/Propofol-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/CorePlot/**";
 				INFOPLIST_FILE = "Propofol/Propofol-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -509,6 +570,7 @@
 				22C15995160DD3570067B4A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22C15996160DD3570067B4A5 /* Build configuration list for PBXNativeTarget "PropofolTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +579,7 @@
 				22C15998160DD3570067B4A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
