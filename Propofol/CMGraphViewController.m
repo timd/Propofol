@@ -18,6 +18,7 @@
 
 @property (strong, nonatomic) IBOutlet CPTGraphHostingView *graphView;
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, strong) IBOutlet UIButton *doseButton;
 @property (nonatomic, strong) NSTimer *heartbeat;
 
 @property (nonatomic) int greenValue;
@@ -64,10 +65,10 @@
     CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *)self.graph.defaultPlotSpace;
     plotSpace.allowsUserInteraction = YES;
     plotSpace.xRange                = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(500.0)];
-    plotSpace.yRange                = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(50)];
+    plotSpace.yRange                = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(8)];
     
     [plotSpace setGlobalXRange:[CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(500)]];
-    [plotSpace setGlobalYRange:[CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(50)]];
+    [plotSpace setGlobalYRange:[CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(8)]];
     
     // Axes
     CPTXYAxisSet *axisSet = (CPTXYAxisSet *)self.graph.axisSet;
@@ -171,77 +172,6 @@
     
 }
 
--(void)doSomethingTimed {
-    
-    self.state = [self.calculator waitTime:0.25f withState:self.state];
-
-    float updatedX1value = [[self.state valueForKey:@"x1"] floatValue];
-    
-    self.tickCounter += 10;
-    
-    // Create new dictionary to add to the data array
-    NSDictionary *newDict = [[NSDictionary alloc] initWithObjectsAndKeys:
-                             [NSNumber numberWithFloat:updatedX1value], @"y",
-                             [NSNumber numberWithFloat:self.tickCounter], @"x", nil];
-    
-    NSLog(@"newDict = %@", newDict);
-    
-    [self.dataForPlot addObject:newDict];
-    
-    // Package the 
-    
-    // Replot the graph
-    [self.graph reloadData];
-    
-/*
-    
-    // Recalc the data
-    NSDictionary *lastValue = [self.dataForPlot lastObject];
-    
-    int lastXValue = [[lastValue objectForKey:@"x"] intValue];
-    
-    int newXValue = lastXValue + 1;
-    
-    int newYValue = (newXValue % 10);
-    
-    NSDictionary *newDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                   [NSNumber numberWithInt:newXValue], @"x",
-                                   [NSNumber numberWithInt:newYValue], @"y",
-                                    nil];
-    
-    
-    
-    [self.dataForPlot addObject:newDictionary];
-    
-    int dataPointCount = [self.dataForPlot count];
-    
-    if (dataPointCount > 15) {
-        
-        float newXorigin = dataPointCount -15;
-
-        CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *)self.graph.defaultPlotSpace;
-        
-        CPTMutablePlotRange *mutablePlotXRange = (CPTMutablePlotRange *)plotSpace.globalXRange;
-        mutablePlotXRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(newXorigin) length:CPTDecimalFromFloat(15.0)];
-        
-        CPTXYAxisSet *axisSet = (CPTXYAxisSet *)self.graph.axisSet;
-        CPTXYAxis *y          = axisSet.yAxis;
-        y.orthogonalCoordinateDecimal = CPTDecimalFromFloat(newXorigin);// CPTDecimalFromString(@"0");
-        
-        [plotSpace setXRange:mutablePlotXRange];
-        [plotSpace setGlobalXRange:mutablePlotXRange];
-        
-        NSLog(@"plotRange = %@", mutablePlotXRange);
-
-    }
-    
-    // Replot the graph
-    [self.graph reloadData];
-    
- */
- 
-}
-
 -(void)viewDidUnload {
     
     [self.heartbeat invalidate];
@@ -279,6 +209,84 @@
     return num;
 }
 
+#pragma mark -
+#pragma mark Data calculation methods
+
+-(void)doSomethingTimed {
+    
+    self.state = [self.calculator waitTime:0.25f withState:self.state];
+    
+    float updatedX1value = [[self.state valueForKey:@"x1"] floatValue];
+    float updatedXeovalue = [[self.state valueForKey:@"xeo"] floatValue];
+    
+    self.tickCounter += 10;
+    
+    // Create new dictionary to add to the data array
+    NSDictionary *newDict = [[NSDictionary alloc] initWithObjectsAndKeys:
+                             [NSNumber numberWithFloat:updatedXeovalue], @"y",
+                             [NSNumber numberWithFloat:self.tickCounter], @"x", nil];
+    
+    NSLog(@"state = %@", self.state);
+    
+    [self.dataForPlot addObject:newDict];
+    
+    
+    // Replot the graph
+    [self.graph reloadData];
+    
+    /*
+     
+     // Recalc the data
+     NSDictionary *lastValue = [self.dataForPlot lastObject];
+     
+     int lastXValue = [[lastValue objectForKey:@"x"] intValue];
+     
+     int newXValue = lastXValue + 1;
+     
+     int newYValue = (newXValue % 10);
+     
+     NSDictionary *newDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
+     [NSNumber numberWithInt:newXValue], @"x",
+     [NSNumber numberWithInt:newYValue], @"y",
+     nil];
+     
+     
+     
+     [self.dataForPlot addObject:newDictionary];
+     
+     int dataPointCount = [self.dataForPlot count];
+     
+     if (dataPointCount > 15) {
+     
+     float newXorigin = dataPointCount -15;
+     
+     CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *)self.graph.defaultPlotSpace;
+     
+     CPTMutablePlotRange *mutablePlotXRange = (CPTMutablePlotRange *)plotSpace.globalXRange;
+     mutablePlotXRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(newXorigin) length:CPTDecimalFromFloat(15.0)];
+     
+     CPTXYAxisSet *axisSet = (CPTXYAxisSet *)self.graph.axisSet;
+     CPTXYAxis *y          = axisSet.yAxis;
+     y.orthogonalCoordinateDecimal = CPTDecimalFromFloat(newXorigin);// CPTDecimalFromString(@"0");
+     
+     [plotSpace setXRange:mutablePlotXRange];
+     [plotSpace setGlobalXRange:mutablePlotXRange];
+     
+     NSLog(@"plotRange = %@", mutablePlotXRange);
+     
+     }
+     
+     // Replot the graph
+     [self.graph reloadData];
+     
+     */
+    
+}
+
+
+#pragma mark -
+#pragma mark Interaction methods
+
 - (IBAction)didTapStopButton:(id)sender {
     
     if ([self.heartbeat isValid]) {
@@ -298,6 +306,12 @@
     if (self.greenValue > 0) {
         self.greenValue -= 1;
     }
+}
+
+-(IBAction)didTapGiveDoseButton:(id)sender {
+    
+    self.state = [self.calculator giveDrugWithQuantity:50.0f withState:self.state];
+    
 }
 
 @end
