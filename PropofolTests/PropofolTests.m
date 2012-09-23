@@ -56,4 +56,13 @@
     
 }
 
+-(void)testWaitTime {
+
+    NSDictionary *testValues = [self.calculator newPatientWithAge:40.0f andWeight:70.0f andHeight:170.0f andMale:YES];
+    STAssertNotNil(testValues, @"testValues should not be nil");
+
+    
+    
+}
+
 @end

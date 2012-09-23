@@ -138,8 +138,11 @@
      
 
     //  INITIALISE DATA
-    self.state = [self.calculator newPatientWithAge:27 andWeight:77 andHeight:170 andMale:YES];
+    self.state = [self.calculator newPatientWithAge:40 andWeight:70 andHeight:170 andMale:YES];
+    self.state = [self.calculator giveDrugWithQuantity:50 withState:self.state];
 
+    NSLog(@"state = %@\n\n", self.state);
+    
     // Add some initial data
     self.dataForPlot = [[NSMutableArray alloc] init];
     NSDictionary *initialData = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithFloat:0.0f], @"x1", nil];
@@ -157,13 +160,11 @@
     
     self.state = [self.calculator waitTime:0.25 withState:self.state];
     
-    float updateX1value = [[self.state valueForKey:@"x1"] floatValue];
+    float updatedX1value = [[self.state valueForKey:@"x1"] floatValue];
     
-    NSDictionary *updatedDict = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithFloat:updateX1value], @"x1", nil];
+    NSLog(@"updatedX1value = %f", updatedX1value);
     
-    [self.dataForPlot addObject:updatedDict];
-    
-    NSLog(@"last x1 value = %@", [[self.dataForPlot lastObject] objectForKey:@"x1"]);
+    // Package the 
     
     // Replot the graph
     //[self.graph reloadData];
