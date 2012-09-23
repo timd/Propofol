@@ -163,8 +163,10 @@
     
     [self.dataForPlot addObject:updatedDict];
     
+    NSLog(@"last x1 value = %@", [[self.dataForPlot lastObject] objectForKey:@"x1"]);
+    
     // Replot the graph
-    [self.graph reloadData];
+    //[self.graph reloadData];
     
 /*
     
