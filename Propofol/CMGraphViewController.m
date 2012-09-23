@@ -22,6 +22,8 @@
 
 @property (nonatomic) int greenValue;
 
+@property (nonatomic) int tickCounter;
+
 @end
 
 @implementation CMGraphViewController
@@ -61,11 +63,11 @@
     // Setup plot space
     CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *)self.graph.defaultPlotSpace;
     plotSpace.allowsUserInteraction = YES;
-    plotSpace.xRange                = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(200.0)];
-    plotSpace.yRange                = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(15)];
+    plotSpace.xRange                = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(500.0)];
+    plotSpace.yRange                = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(50)];
     
-    [plotSpace setGlobalXRange:[CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(25)]];
-    [plotSpace setGlobalYRange:[CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(15)]];
+    [plotSpace setGlobalXRange:[CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(500)]];
+    [plotSpace setGlobalYRange:[CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(50)]];
     
     // Axes
     CPTXYAxisSet *axisSet = (CPTXYAxisSet *)self.graph.axisSet;
@@ -145,29 +147,51 @@
     
     // Add some initial data
     self.dataForPlot = [[NSMutableArray alloc] init];
-    NSDictionary *initialData = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithFloat:0.0f], @"x1", nil];
+    
+    /* Initial data dict
+    
+        "X" : 0.0f
+        "Y" : 0.0f
+     
+    */
+    
+    self.tickCounter = 0;
+    
+    NSDictionary *initialData = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                 [NSNumber numberWithInt:self.tickCounter], @"x",
+                                 [NSNumber numberWithFloat:0.0f], @"y",
+                                 nil];
+    
     [self.dataForPlot addObject:initialData];
     
-    self.heartbeat = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(doSomethingTimed) userInfo:nil repeats:YES];
+    self.heartbeat = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(doSomethingTimed) userInfo:nil repeats:YES];
+    
     
     self.greenValue = 5;
-    
-    
     
 }
 
 -(void)doSomethingTimed {
     
-    self.state = [self.calculator waitTime:0.25 withState:self.state];
-    
+    self.state = [self.calculator waitTime:0.25f withState:self.state];
+
     float updatedX1value = [[self.state valueForKey:@"x1"] floatValue];
     
-    NSLog(@"updatedX1value = %f", updatedX1value);
+    self.tickCounter += 10;
+    
+    // Create new dictionary to add to the data array
+    NSDictionary *newDict = [[NSDictionary alloc] initWithObjectsAndKeys:
+                             [NSNumber numberWithFloat:updatedX1value], @"y",
+                             [NSNumber numberWithFloat:self.tickCounter], @"x", nil];
+    
+    NSLog(@"newDict = %@", newDict);
+    
+    [self.dataForPlot addObject:newDict];
     
     // Package the 
     
     // Replot the graph
-    //[self.graph reloadData];
+    [self.graph reloadData];
     
 /*
     
