@@ -27,14 +27,14 @@
     NSLog(@"targetConcentration = %f", self.targetConcentration);
 }
 
--(NSMutableDictionary *)newPatientWithAge:(int)age andWeight:(int)weight andHeight:(int)height andMale:(BOOL)male {
+-(NSMutableDictionary *)newPatientWithAge:(float)age andWeight:(float)weight andHeight:(float)height andMale:(BOOL)male {
     
     float lbm;
     
     if (male) {
-        lbm = expf(1.1 * weight - 128 * (weight/height));
+        lbm = 1.1 * weight - 128 * ((weight/height) * (weight/height));
     } else {
-        lbm = expf(1.07 * weight - 148 * (weight/height));
+        lbm = 1.07 * weight - 148 * ((weight/height) * (weight/height));
     }
     
     float v1 = 4.27;
@@ -44,7 +44,7 @@
     float k10 = 0.443 + 0.0107 * (weight - 77) - 0.0159 * (lbm - 59) + 0.0062 * (height - 177);
     float k12 = 0.302 - 0.0056 * (age - 53);
     float k13 = 0.196;
-    float k21 = (1.29 - 0.024 * (age - 53)) / (18.9 - 0.391) * (age - 53);
+    float k21 = (1.29 - 0.024 * (age - 53)) / (18.9 - 0.391 * (age - 53));
     float k31 = 0.0035;
     
     float keo = 0.456;

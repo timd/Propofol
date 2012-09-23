@@ -14,6 +14,8 @@
 		2273996F160F13CA00DA07D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2273996D160F13CA00DA07D5 /* InfoPlist.strings */; };
 		22739972160F13CA00DA07D5 /* PropofolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22739971160F13CA00DA07D5 /* PropofolTests.m */; };
 		22739977160F13D700DA07D5 /* CMCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C159AA160DDE480067B4A5 /* CMCalculator.m */; };
+		2293548D160F19ED003E4B14 /* algorithm_test.py in Resources */ = {isa = PBXBuildFile; fileRef = 2293548B160F19ED003E4B14 /* algorithm_test.py */; };
+		2293548E160F19ED003E4B14 /* algorithm.py in Resources */ = {isa = PBXBuildFile; fileRef = 2293548C160F19ED003E4B14 /* algorithm.py */; };
 		22C1595F160DD3570067B4A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C1595E160DD3570067B4A5 /* UIKit.framework */; };
 		22C15961160DD3570067B4A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C15960160DD3570067B4A5 /* Foundation.framework */; };
 		22C15963160DD3570067B4A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C15962160DD3570067B4A5 /* CoreGraphics.framework */; };
@@ -54,6 +56,8 @@
 		22739970160F13CA00DA07D5 /* PropofolTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropofolTests.h; sourceTree = "<group>"; };
 		22739971160F13CA00DA07D5 /* PropofolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropofolTests.m; sourceTree = "<group>"; };
 		22739973160F13CA00DA07D5 /* PropofolTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PropofolTests-Prefix.pch"; sourceTree = "<group>"; };
+		2293548B160F19ED003E4B14 /* algorithm_test.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = algorithm_test.py; sourceTree = SOURCE_ROOT; };
+		2293548C160F19ED003E4B14 /* algorithm.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = algorithm.py; sourceTree = SOURCE_ROOT; };
 		22C1595A160DD3560067B4A5 /* propofol.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = propofol.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C1595E160DD3570067B4A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		22C15960160DD3570067B4A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -215,6 +219,8 @@
 		22C15989160DD3570067B4A5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2293548B160F19ED003E4B14 /* algorithm_test.py */,
+				2293548C160F19ED003E4B14 /* algorithm.py */,
 				22C1598A160DD3570067B4A5 /* propofol.temp_caseinsensitive_renameTests-Info.plist */,
 				22C1598B160DD3570067B4A5 /* InfoPlist.strings */,
 			);
@@ -378,6 +384,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2273996F160F13CA00DA07D5 /* InfoPlist.strings in Resources */,
+				2293548D160F19ED003E4B14 /* algorithm_test.py in Resources */,
+				2293548E160F19ED003E4B14 /* algorithm.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
