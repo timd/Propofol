@@ -52,7 +52,19 @@
 //  float ttpe = 1.69;
     
     NSArray *keysArray = [NSArray arrayWithObjects:@"x1", @"x2", @"x3", @"v1", @"v2", @"v3", @"k10", @"k12", @"k13", @"k21", @"k31", @"keo", nil];
-    NSArray *valsArray = [NSArray arrayWithObjects:@0, @0, @0, v1, v2, v3, k10, k12, k13, k21, k31, keo, nil];
+    NSArray *valsArray = [NSArray arrayWithObjects:@0,
+                          @0,
+                          @0,
+                          [NSNumber numberWithFloat:v1],
+                          [NSNumber numberWithFloat:v2],
+                          [NSNumber numberWithFloat:v3],
+                          [NSNumber numberWithFloat:k10],
+                          [NSNumber numberWithFloat:k12],
+                          [NSNumber numberWithFloat:k13],
+                          [NSNumber numberWithFloat:k21],
+                          [NSNumber numberWithFloat:k31],
+                          [NSNumber numberWithFloat:keo],
+                          nil];
     
     NSMutableDictionary *state = [[NSMutableDictionary alloc] initWithObjects:valsArray forKeys:keysArray];
     

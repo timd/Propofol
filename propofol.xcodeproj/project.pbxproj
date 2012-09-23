@@ -595,6 +595,7 @@
 				22739976160F13CA00DA07D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22C15954160DD3560067B4A5 /* Build configuration list for PBXProject "propofol" */ = {
 			isa = XCConfigurationList;

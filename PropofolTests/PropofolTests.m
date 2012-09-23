@@ -36,5 +36,11 @@
     STAssertNotNil(self.calculator, @"should not be nil");
 }
 
-
+-(void)testInitialValues {
+    
+    NSDictionary *testValues = [self.calculator newPatientWithAge:27 andWeight:77 andHeight:170 andMale:YES];
+    
+    STAssertNotNil(testValues, @"testValues should not be nil");
+    
+}
 @end
