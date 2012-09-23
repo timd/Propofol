@@ -10,12 +10,16 @@
 #import "CorePlot-CocoaTouch.h"
 #import "CMBaseViewController.h"
 
+@class CMCalculator;
+
 @interface CMGraphViewController : CMBaseViewController <CPTPlotDataSource>
 
-- (IBAction)didTapStopButton:(id)sender;
+@property (nonatomic, strong) CMCalculator *calculator;
+
 @property (strong, nonatomic) IBOutlet UIButton *toggleButton;
 
 - (IBAction)didTapUpButton:(id)sender;
 - (IBAction)didTapDownButton:(id)sender;
+- (IBAction)didTapStopButton:(id)sender;
 
 @end

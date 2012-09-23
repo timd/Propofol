@@ -137,6 +137,8 @@
     
     CMGraphViewController *graphController = [[CMGraphViewController alloc] initWithNibName:@"CMGraphView" bundle:nil];
 
+    [graphController setCalculator:self.calculator];
+    
     [self.navigationController pushViewController:graphController animated:YES];
     
     [self.calculator logValues];

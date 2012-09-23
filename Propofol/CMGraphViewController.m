@@ -7,11 +7,14 @@
 //
 
 #import "CMGraphViewController.h"
+#import "CMCalculator.h"
 
 @interface CMGraphViewController ()
 
 @property (nonatomic, strong) CPTXYGraph *graph;
 @property (nonatomic, strong) NSMutableArray *dataForPlot;
+
+@property (nonatomic, strong) NSMutableDictionary *state;
 
 @property (strong, nonatomic) IBOutlet CPTGraphHostingView *graphView;
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
@@ -134,18 +137,36 @@
     [self.graph addPlot:dataSourceLinePlot];
      
 
+    //  INITIALISE DATA
+    self.state = [self.calculator newPatientWithAge:27 andWeight:77 andHeight:170 andMale:YES];
+
     // Add some initial data
     self.dataForPlot = [[NSMutableArray alloc] init];
-    NSDictionary *initialData = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithInt:0], @"x", [NSNumber numberWithInt:0], @"y", nil];
+    NSDictionary *initialData = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithFloat:0.0f], @"x1", nil];
     [self.dataForPlot addObject:initialData];
     
     self.heartbeat = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(doSomethingTimed) userInfo:nil repeats:YES];
     
     self.greenValue = 5;
     
+    
+    
 }
 
 -(void)doSomethingTimed {
+    
+    self.state = [self.calculator waitTime:0.25 withState:self.state];
+    
+    float updateX1value = [[self.state valueForKey:@"x1"] floatValue];
+    
+    NSDictionary *updatedDict = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithFloat:updateX1value], @"x1", nil];
+    
+    [self.dataForPlot addObject:updatedDict];
+    
+    // Replot the graph
+    [self.graph reloadData];
+    
+/*
     
     // Recalc the data
     NSDictionary *lastValue = [self.dataForPlot lastObject];
@@ -167,16 +188,6 @@
     
     int dataPointCount = [self.dataForPlot count];
     
-    /*
-            x   x   x   x   x   x
-                    0   5   10  15
-                0   5   10  15  20
-            0   5   10  15  20  25
-            5   10  15  20  25  30
-     
-     
-    */
-
     if (dataPointCount > 15) {
         
         float newXorigin = dataPointCount -15;
@@ -200,6 +211,8 @@
     // Replot the graph
     [self.graph reloadData];
     
+ */
+ 
 }
 
 -(void)viewDidUnload {

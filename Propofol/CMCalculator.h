@@ -18,4 +18,8 @@
 
 -(void)logValues;
 
+-(NSMutableDictionary *)newPatientWithAge:(int)age andWeight:(int)weight andHeight:(int)height andMale:(BOOL)male;
+-(NSMutableDictionary *)giveDrugWithQuantity:(int)milligrams withState:(NSMutableDictionary *)state;
+-(NSMutableDictionary *)waitTime:(float)time withState:(NSMutableDictionary *)s;
+
 @end
