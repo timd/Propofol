@@ -319,7 +319,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Charismatic Megafauna Ltd";
 			};
-			buildConfigurationList = 22C15954160DD3560067B4A5 /* Build configuration list for PBXProject "Propofol" */;
+			buildConfigurationList = 22C15954160DD3560067B4A5 /* Build configuration list for PBXProject "propofol" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -568,7 +568,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		22C15954160DD3560067B4A5 /* Build configuration list for PBXProject "Propofol" */ = {
+		22C15954160DD3560067B4A5 /* Build configuration list for PBXProject "propofol" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22C15991160DD3570067B4A5 /* Debug */,
