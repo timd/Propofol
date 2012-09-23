@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CorePlot-CocoaTouch.h"
+#import "CMBaseViewController.h"
 
-@interface CMGraphViewController : UIViewController <CPTPlotDataSource>
+@interface CMGraphViewController : CMBaseViewController <CPTPlotDataSource>
 
 - (IBAction)didTapStopButton:(id)sender;
 @property (strong, nonatomic) IBOutlet UIButton *toggleButton;

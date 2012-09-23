@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CMBaseViewController.h"
 
 @class CMCalculator;
 
-@interface CMConcentrationViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface CMConcentrationViewController : CMBaseViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (nonatomic, strong) CMCalculator *calculator;
 

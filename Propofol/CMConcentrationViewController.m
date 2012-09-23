@@ -7,6 +7,7 @@
 //
 
 #import "CMConcentrationViewController.h"
+#import "CMGraphViewController.h"
 
 #import "CMCalculator.h"
 
@@ -48,6 +49,9 @@
     for (int dec = 0; dec < 10; dec++) {
         [self.concDecimalValues addObject:[NSNumber numberWithInt:dec]];
     }
+    
+    [self.swipeRight addTarget:self action:@selector(didTapNextButton:)];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -130,6 +134,10 @@
 }
 
 - (IBAction)didTapNextButton:(id)sender {
+    
+    CMGraphViewController *graphController = [[CMGraphViewController alloc] initWithNibName:@"CMGraphView" bundle:nil];
+
+    [self.navigationController pushViewController:graphController animated:YES];
     
     [self.calculator logValues];
     

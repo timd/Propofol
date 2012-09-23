@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22739941160EF5E300DA07D5 /* CMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22739940160EF5E300DA07D5 /* CMBaseViewController.m */; };
 		22C1595F160DD3570067B4A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C1595E160DD3570067B4A5 /* UIKit.framework */; };
 		22C15961160DD3570067B4A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C15960160DD3570067B4A5 /* Foundation.framework */; };
 		22C15963160DD3570067B4A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C15962160DD3570067B4A5 /* CoreGraphics.framework */; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2273993F160EF5E300DA07D5 /* CMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBaseViewController.h; sourceTree = "<group>"; };
+		22739940160EF5E300DA07D5 /* CMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBaseViewController.m; sourceTree = "<group>"; };
 		22C1595A160DD3560067B4A5 /* Propofol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Propofol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C1595E160DD3570067B4A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		22C15960160DD3570067B4A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -113,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2273993E160EF5C400DA07D5 /* Base classes */ = {
+			isa = PBXGroup;
+			children = (
+				2273993F160EF5E300DA07D5 /* CMBaseViewController.h */,
+				22739940160EF5E300DA07D5 /* CMBaseViewController.m */,
+			);
+			name = "Base classes";
+			sourceTree = "<group>";
+		};
 		22C1594F160DD3560067B4A5 = {
 			isa = PBXGroup;
 			children = (
@@ -203,9 +215,10 @@
 		22C1599A160DD3E20067B4A5 /* Front end */ = {
 			isa = PBXGroup;
 			children = (
-				22E89E3B160E0253003896C6 /* Graphs */,
+				2273993E160EF5C400DA07D5 /* Base classes */,
 				22C1599B160DD3E90067B4A5 /* Vitals */,
 				22C1599C160DD8E20067B4A5 /* Concentration */,
+				22E89E3B160E0253003896C6 /* Graphs */,
 			);
 			name = "Front end";
 			sourceTree = "<group>";
@@ -393,6 +406,7 @@
 				22C159A7160DD9740067B4A5 /* CMBaseNavController.m in Sources */,
 				22C159AB160DDE480067B4A5 /* CMCalculator.m in Sources */,
 				22E89E40160E0268003896C6 /* CMGraphViewController.m in Sources */,
+				22739941160EF5E300DA07D5 /* CMBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

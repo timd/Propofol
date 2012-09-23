@@ -19,10 +19,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
-//    CMVitalsViewController *vitalsController = [[CMVitalsViewController alloc] initWithNibName:@"CMVitalsView" bundle:nil];
-    CMGraphViewController *graphController = [[CMGraphViewController alloc] initWithNibName:@"CMGraphView" bundle:nil];
-    
-    CMBaseNavController *navController = [[CMBaseNavController alloc] initWithRootViewController:graphController];
+    CMVitalsViewController *vitalsController = [[CMVitalsViewController alloc] initWithNibName:@"CMVitalsView" bundle:nil];
+    CMBaseNavController *navController = [[CMBaseNavController alloc] initWithRootViewController:vitalsController];
+
+//    CMGraphViewController *graphController = [[CMGraphViewController alloc] initWithNibName:@"CMGraphView" bundle:nil];
+//    CMBaseNavController *navController = [[CMBaseNavController alloc] initWithRootViewController:graphController];
+
     [navController setNavigationBarHidden:YES];
     self.window.rootViewController = navController;
 

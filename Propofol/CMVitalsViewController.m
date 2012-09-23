@@ -62,6 +62,9 @@
     // Setup gender control
     [self.genderControl addTarget:self action:@selector(didChangeGenderValue) forControlEvents:UIControlEventValueChanged];
     
+    // Fix settings of gesture recognizers
+    [self.swipeRight addTarget:self action:@selector(didTapNextButton:)];
+
 }
 
 - (void)didReceiveMemoryWarning

@@ -202,6 +202,12 @@
     
 }
 
+-(void)viewDidUnload {
+    
+    [self.heartbeat invalidate];
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
