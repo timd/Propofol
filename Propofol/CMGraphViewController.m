@@ -64,10 +64,10 @@
     // Setup plot space
     CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *)self.graph.defaultPlotSpace;
     plotSpace.allowsUserInteraction = YES;
-    plotSpace.xRange                = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(500.0)];
-    plotSpace.yRange                = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(8)];
+    plotSpace.xRange                = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(750)];
+    plotSpace.yRange                = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(5)];
     
-    [plotSpace setGlobalXRange:[CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(500)]];
+    [plotSpace setGlobalXRange:[CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(750)]];
     [plotSpace setGlobalYRange:[CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.0) length:CPTDecimalFromFloat(8)]];
     
     // Axes
@@ -165,10 +165,10 @@
     
     [self.dataForPlot addObject:initialData];
     
-    self.heartbeat = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(doSomethingTimed) userInfo:nil repeats:YES];
+    self.heartbeat = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(doSomethingTimed) userInfo:nil repeats:YES];
     
     
-    self.greenValue = 5;
+    self.greenValue = 2.5;
     
 }
 
@@ -231,55 +231,44 @@
     [self.dataForPlot addObject:newDict];
     
     
-    // Replot the graph
-    [self.graph reloadData];
-    
-    /*
-     
-     // Recalc the data
-     NSDictionary *lastValue = [self.dataForPlot lastObject];
-     
-     int lastXValue = [[lastValue objectForKey:@"x"] intValue];
-     
-     int newXValue = lastXValue + 1;
-     
-     int newYValue = (newXValue % 10);
-     
-     NSDictionary *newDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
-     [NSNumber numberWithInt:newXValue], @"x",
-     [NSNumber numberWithInt:newYValue], @"y",
-     nil];
-     
-     
-     
-     [self.dataForPlot addObject:newDictionary];
-     
+/*
      int dataPointCount = [self.dataForPlot count];
      
-     if (dataPointCount > 15) {
+     if (dataPointCount > 50) {
      
-     float newXorigin = dataPointCount -15;
-     
-     CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *)self.graph.defaultPlotSpace;
-     
-     CPTMutablePlotRange *mutablePlotXRange = (CPTMutablePlotRange *)plotSpace.globalXRange;
-     mutablePlotXRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(newXorigin) length:CPTDecimalFromFloat(15.0)];
-     
-     CPTXYAxisSet *axisSet = (CPTXYAxisSet *)self.graph.axisSet;
-     CPTXYAxis *y          = axisSet.yAxis;
-     y.orthogonalCoordinateDecimal = CPTDecimalFromFloat(newXorigin);// CPTDecimalFromString(@"0");
-     
-     [plotSpace setXRange:mutablePlotXRange];
-     [plotSpace setGlobalXRange:mutablePlotXRange];
-     
-     NSLog(@"plotRange = %@", mutablePlotXRange);
-     
+         float newXorigin = dataPointCount -100;
+         
+         CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *)self.graph.defaultPlotSpace;
+         
+         CPTMutablePlotRange *mutablePlotXRange = (CPTMutablePlotRange *)plotSpace.globalXRange;
+         
+         // Current origin
+         int currentOrigin = mutablePlotXRange.location._exponent;
+         int newOrigin = currentOrigin - 10;
+         
+//         mutablePlotXRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(newXorigin) length:CPTDecimalFromFloat(500.0)];
+         mutablePlotXRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromInt(newOrigin) length:CPTDecimalFromFloat(500.0)];
+  
+         CPTXYAxisSet *axisSet = (CPTXYAxisSet *)self.graph.axisSet;
+         CPTXYAxis *y          = axisSet.yAxis;
+         
+         int newCoord = axisSet.yAxis.orthogonalCoordinateDecimal._exponent + 10;
+         
+         y.orthogonalCoordinateDecimal = CPTDecimalFromInt(newCoord); //(newXorigin);// CPTDecimalFromString(@"0");
+         
+         [plotSpace setXRange:mutablePlotXRange];
+         [plotSpace setGlobalXRange:mutablePlotXRange];
+         
+         NSLog(@"plotRange = %@", mutablePlotXRange);
+         
+         // Replot the graph
+         //[self.graph reloadData];
+         
      }
-     
-     // Replot the graph
-     [self.graph reloadData];
-     
-     */
+
+ */
+ 
+    [self.graph reloadData];
     
 }
 
