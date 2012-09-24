@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		22739941160EF5E300DA07D5 /* CMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22739940160EF5E300DA07D5 /* CMBaseViewController.m */; };
+		22739967160F13CA00DA07D5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C15982160DD3570067B4A5 /* SenTestingKit.framework */; };
+		22739968160F13CA00DA07D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C1595E160DD3570067B4A5 /* UIKit.framework */; };
+		22739969160F13CA00DA07D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C15960160DD3570067B4A5 /* Foundation.framework */; };
+		22739977160F13D700DA07D5 /* CMCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C159AA160DDE480067B4A5 /* CMCalculator.m */; };
+		2293548D160F19ED003E4B14 /* algorithm_test.py in Resources */ = {isa = PBXBuildFile; fileRef = 2293548B160F19ED003E4B14 /* algorithm_test.py */; };
+		2293548E160F19ED003E4B14 /* algorithm.py in Resources */ = {isa = PBXBuildFile; fileRef = 2293548C160F19ED003E4B14 /* algorithm.py */; };
 		22C1595F160DD3570067B4A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C1595E160DD3570067B4A5 /* UIKit.framework */; };
 		22C15961160DD3570067B4A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C15960160DD3570067B4A5 /* Foundation.framework */; };
 		22C15963160DD3570067B4A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C15962160DD3570067B4A5 /* CoreGraphics.framework */; };
@@ -18,11 +24,6 @@
 		22C15973160DD3570067B4A5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C15972160DD3570067B4A5 /* Default@2x.png */; };
 		22C15975160DD3570067B4A5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C15974160DD3570067B4A5 /* Default-568h@2x.png */; };
 		22C1597B160DD3570067B4A5 /* CMVitalsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C15979160DD3570067B4A5 /* CMVitalsView.xib */; };
-		22C15983160DD3570067B4A5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C15982160DD3570067B4A5 /* SenTestingKit.framework */; };
-		22C15984160DD3570067B4A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C1595E160DD3570067B4A5 /* UIKit.framework */; };
-		22C15985160DD3570067B4A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C15960160DD3570067B4A5 /* Foundation.framework */; };
-		22C1598D160DD3570067B4A5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22C1598B160DD3570067B4A5 /* InfoPlist.strings */; };
-		22C15990160DD3570067B4A5 /* PropofolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1598F160DD3570067B4A5 /* PropofolTests.m */; };
 		22C159A0160DD8FC0067B4A5 /* CMConcentrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1599E160DD8FC0067B4A5 /* CMConcentrationViewController.m */; };
 		22C159A1160DD8FC0067B4A5 /* CMConcentrationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C1599F160DD8FC0067B4A5 /* CMConcentrationView.xib */; };
 		22C159A3160DD9320067B4A5 /* CMVitalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C159A2160DD9320067B4A5 /* CMVitalsViewController.m */; };
@@ -32,16 +33,10 @@
 		22E89E41160E0268003896C6 /* CMGraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E89E3F160E0268003896C6 /* CMGraphView.xib */; };
 		22E89E5B160E0318003896C6 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E89E5A160E0311003896C6 /* libCorePlot-CocoaTouch.a */; };
 		22E89E5D160E0370003896C6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E89E5C160E0370003896C6 /* QuartzCore.framework */; };
+		22F7BF9D161057EA00F3D6B1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 22F7BF9C161057EA00F3D6B1 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		22C15986160DD3570067B4A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 22C15951160DD3560067B4A5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 22C15959160DD3560067B4A5;
-			remoteInfo = Propofol;
-		};
 		22E89E59160E0311003896C6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 22E89E50160E0311003896C6 /* CorePlot-CocoaTouch.xcodeproj */;
@@ -54,14 +49,17 @@
 /* Begin PBXFileReference section */
 		2273993F160EF5E300DA07D5 /* CMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBaseViewController.h; sourceTree = "<group>"; };
 		22739940160EF5E300DA07D5 /* CMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBaseViewController.m; sourceTree = "<group>"; };
-		22C1595A160DD3560067B4A5 /* Propofol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Propofol.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22739966160F13CA00DA07D5 /* PropofolTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PropofolTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2293548B160F19ED003E4B14 /* algorithm_test.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = algorithm_test.py; sourceTree = SOURCE_ROOT; };
+		2293548C160F19ED003E4B14 /* algorithm.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = algorithm.py; sourceTree = SOURCE_ROOT; };
+		22C1595A160DD3560067B4A5 /* propofol.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = propofol.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C1595E160DD3570067B4A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		22C15960160DD3570067B4A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		22C15962160DD3570067B4A5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		22C15966160DD3570067B4A5 /* Propofol-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Propofol-Info.plist"; sourceTree = "<group>"; };
+		22C15966160DD3570067B4A5 /* propofol.temp_caseinsensitive_rename-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "propofol.temp_caseinsensitive_rename-Info.plist"; sourceTree = "<group>"; };
 		22C15968160DD3570067B4A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		22C1596A160DD3570067B4A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		22C1596C160DD3570067B4A5 /* Propofol-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Propofol-Prefix.pch"; sourceTree = "<group>"; };
+		22C1596C160DD3570067B4A5 /* propofol.temp_caseinsensitive_rename-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "propofol.temp_caseinsensitive_rename-Prefix.pch"; sourceTree = "<group>"; };
 		22C1596D160DD3570067B4A5 /* CMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMAppDelegate.h; sourceTree = "<group>"; };
 		22C1596E160DD3570067B4A5 /* CMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMAppDelegate.m; sourceTree = "<group>"; };
 		22C15970160DD3570067B4A5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -69,9 +67,8 @@
 		22C15974160DD3570067B4A5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		22C15976160DD3570067B4A5 /* CMVitalsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMVitalsViewController.h; sourceTree = "<group>"; };
 		22C1597A160DD3570067B4A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CMVitalsView.xib; sourceTree = "<group>"; };
-		22C15981160DD3570067B4A5 /* PropofolTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PropofolTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C15982160DD3570067B4A5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		22C1598A160DD3570067B4A5 /* PropofolTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PropofolTests-Info.plist"; sourceTree = "<group>"; };
+		22C1598A160DD3570067B4A5 /* propofol.temp_caseinsensitive_renameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "propofol.temp_caseinsensitive_renameTests-Info.plist"; sourceTree = "<group>"; };
 		22C1598C160DD3570067B4A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		22C1598E160DD3570067B4A5 /* PropofolTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropofolTests.h; sourceTree = "<group>"; };
 		22C1598F160DD3570067B4A5 /* PropofolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropofolTests.m; sourceTree = "<group>"; };
@@ -88,9 +85,20 @@
 		22E89E3F160E0268003896C6 /* CMGraphView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMGraphView.xib; sourceTree = "<group>"; };
 		22E89E50160E0311003896C6 /* CorePlot-CocoaTouch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CorePlot-CocoaTouch.xcodeproj"; path = "Frameworks/CorePlot/CorePlot-CocoaTouch.xcodeproj"; sourceTree = "<group>"; };
 		22E89E5C160E0370003896C6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		22F7BF9C161057EA00F3D6B1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		22739962160F13CA00DA07D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22739967160F13CA00DA07D5 /* SenTestingKit.framework in Frameworks */,
+				22739968160F13CA00DA07D5 /* UIKit.framework in Frameworks */,
+				22739969160F13CA00DA07D5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22C15957160DD3560067B4A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,16 +108,6 @@
 				22C1595F160DD3570067B4A5 /* UIKit.framework in Frameworks */,
 				22C15961160DD3570067B4A5 /* Foundation.framework in Frameworks */,
 				22C15963160DD3570067B4A5 /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22C1597D160DD3570067B4A5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				22C15983160DD3570067B4A5 /* SenTestingKit.framework in Frameworks */,
-				22C15984160DD3570067B4A5 /* UIKit.framework in Frameworks */,
-				22C15985160DD3570067B4A5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +126,7 @@
 		22C1594F160DD3560067B4A5 = {
 			isa = PBXGroup;
 			children = (
+				22F7BF9C161057EA00F3D6B1 /* README.md */,
 				22E89E50160E0311003896C6 /* CorePlot-CocoaTouch.xcodeproj */,
 				22C15964160DD3570067B4A5 /* Propofol */,
 				22C15988160DD3570067B4A5 /* PropofolTests */,
@@ -139,8 +138,8 @@
 		22C1595B160DD3560067B4A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				22C1595A160DD3560067B4A5 /* Propofol.app */,
-				22C15981160DD3570067B4A5 /* PropofolTests.octest */,
+				22C1595A160DD3560067B4A5 /* propofol.temp_caseinsensitive_rename.app */,
+				22739966160F13CA00DA07D5 /* PropofolTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,6 +159,7 @@
 		22C15964160DD3570067B4A5 /* Propofol */ = {
 			isa = PBXGroup;
 			children = (
+				22F7BF9A161057A600F3D6B1 /* Assets */,
 				22C15999160DD3D60067B4A5 /* App delegate */,
 				22C159A8160DDE2F0067B4A5 /* Calculator */,
 				22C1599A160DD3E20067B4A5 /* Front end */,
@@ -171,13 +171,10 @@
 		22C15965160DD3570067B4A5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				22C15966160DD3570067B4A5 /* Propofol-Info.plist */,
+				22C15966160DD3570067B4A5 /* propofol.temp_caseinsensitive_rename-Info.plist */,
 				22C15967160DD3570067B4A5 /* InfoPlist.strings */,
 				22C1596A160DD3570067B4A5 /* main.m */,
-				22C1596C160DD3570067B4A5 /* Propofol-Prefix.pch */,
-				22C15970160DD3570067B4A5 /* Default.png */,
-				22C15972160DD3570067B4A5 /* Default@2x.png */,
-				22C15974160DD3570067B4A5 /* Default-568h@2x.png */,
+				22C1596C160DD3570067B4A5 /* propofol.temp_caseinsensitive_rename-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -195,7 +192,9 @@
 		22C15989160DD3570067B4A5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				22C1598A160DD3570067B4A5 /* PropofolTests-Info.plist */,
+				2293548B160F19ED003E4B14 /* algorithm_test.py */,
+				2293548C160F19ED003E4B14 /* algorithm.py */,
+				22C1598A160DD3570067B4A5 /* propofol.temp_caseinsensitive_renameTests-Info.plist */,
 				22C1598B160DD3570067B4A5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -270,12 +269,48 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		22F7BF9A161057A600F3D6B1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				22F7BF9B161057B000F3D6B1 /* App-wide */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		22F7BF9B161057B000F3D6B1 /* App-wide */ = {
+			isa = PBXGroup;
+			children = (
+				22C15970160DD3570067B4A5 /* Default.png */,
+				22C15972160DD3570067B4A5 /* Default@2x.png */,
+				22C15974160DD3570067B4A5 /* Default-568h@2x.png */,
+			);
+			name = "App-wide";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		22C15959160DD3560067B4A5 /* Propofol */ = {
+		22739965160F13CA00DA07D5 /* PropofolTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 22C15993160DD3570067B4A5 /* Build configuration list for PBXNativeTarget "Propofol" */;
+			buildConfigurationList = 22739974160F13CA00DA07D5 /* Build configuration list for PBXNativeTarget "PropofolTests" */;
+			buildPhases = (
+				22739961160F13CA00DA07D5 /* Sources */,
+				22739962160F13CA00DA07D5 /* Frameworks */,
+				22739963160F13CA00DA07D5 /* Resources */,
+				22739964160F13CA00DA07D5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PropofolTests;
+			productName = PropofolTests;
+			productReference = 22739966160F13CA00DA07D5 /* PropofolTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		22C15959160DD3560067B4A5 /* propofol.temp_caseinsensitive_rename */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22C15993160DD3570067B4A5 /* Build configuration list for PBXNativeTarget "propofol.temp_caseinsensitive_rename" */;
 			buildPhases = (
 				22C15956160DD3560067B4A5 /* Sources */,
 				22C15957160DD3560067B4A5 /* Frameworks */,
@@ -285,29 +320,10 @@
 			);
 			dependencies = (
 			);
-			name = Propofol;
+			name = propofol.temp_caseinsensitive_rename;
 			productName = Propofol;
-			productReference = 22C1595A160DD3560067B4A5 /* Propofol.app */;
+			productReference = 22C1595A160DD3560067B4A5 /* propofol.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
-		};
-		22C15980160DD3570067B4A5 /* PropofolTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 22C15996160DD3570067B4A5 /* Build configuration list for PBXNativeTarget "PropofolTests" */;
-			buildPhases = (
-				22C1597C160DD3570067B4A5 /* Sources */,
-				22C1597D160DD3570067B4A5 /* Frameworks */,
-				22C1597E160DD3570067B4A5 /* Resources */,
-				22C1597F160DD3570067B4A5 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				22C15987160DD3570067B4A5 /* PBXTargetDependency */,
-			);
-			name = PropofolTests;
-			productName = PropofolTests;
-			productReference = 22C15981160DD3570067B4A5 /* PropofolTests.octest */;
-			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -337,8 +353,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				22C15959160DD3560067B4A5 /* Propofol */,
-				22C15980160DD3570067B4A5 /* PropofolTests */,
+				22C15959160DD3560067B4A5 /* propofol.temp_caseinsensitive_rename */,
+				22739965160F13CA00DA07D5 /* PropofolTests */,
 			);
 		};
 /* End PBXProject section */
@@ -354,6 +370,15 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		22739963160F13CA00DA07D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2293548D160F19ED003E4B14 /* algorithm_test.py in Resources */,
+				2293548E160F19ED003E4B14 /* algorithm.py in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22C15958160DD3560067B4A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,21 +390,14 @@
 				22C1597B160DD3570067B4A5 /* CMVitalsView.xib in Resources */,
 				22C159A1160DD8FC0067B4A5 /* CMConcentrationView.xib in Resources */,
 				22E89E41160E0268003896C6 /* CMGraphView.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22C1597E160DD3570067B4A5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				22C1598D160DD3570067B4A5 /* InfoPlist.strings in Resources */,
+				22F7BF9D161057EA00F3D6B1 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		22C1597F160DD3570067B4A5 /* ShellScript */ = {
+		22739964160F13CA00DA07D5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -395,6 +413,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		22739961160F13CA00DA07D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22739977160F13D700DA07D5 /* CMCalculator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22C15956160DD3560067B4A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,23 +436,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		22C1597C160DD3570067B4A5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				22C15990160DD3570067B4A5 /* PropofolTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		22C15987160DD3570067B4A5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 22C15959160DD3560067B4A5 /* Propofol */;
-			targetProxy = 22C15986160DD3570067B4A5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		22C15967160DD3570067B4A5 /* InfoPlist.strings */ = {
@@ -456,6 +466,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		22739975160F13CA00DA07D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PropofolTests/PropofolTests-Prefix.pch";
+				INFOPLIST_FILE = "PropofolTests/PropofolTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		22739976160F13CA00DA07D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PropofolTests/PropofolTests-Prefix.pch";
+				INFOPLIST_FILE = "PropofolTests/PropofolTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		22C15991160DD3570067B4A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -492,7 +532,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tim Duckett";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -500,6 +540,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F6BAD32F-61A4-4B58-A5DC-5ED672496EB6";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -509,11 +550,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Propofol/Propofol-Prefix.pch";
+				GCC_PREFIX_HEADER = "Propofol/propofol.temp_caseinsensitive_rename-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/CorePlot/**";
-				INFOPLIST_FILE = "Propofol/Propofol-Info.plist";
+				INFOPLIST_FILE = "Propofol/propofol.temp_caseinsensitive_rename-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = propofol.temp_caseinsensitive_rename;
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -521,53 +563,30 @@
 		22C15995160DD3570067B4A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Propofol/Propofol-Prefix.pch";
+				GCC_PREFIX_HEADER = "Propofol/propofol.temp_caseinsensitive_rename-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/CorePlot/**";
-				INFOPLIST_FILE = "Propofol/Propofol-Info.plist";
+				INFOPLIST_FILE = "Propofol/propofol.temp_caseinsensitive_rename-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = propofol.temp_caseinsensitive_rename;
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		22C15997160DD3570067B4A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Propofol.app/Propofol";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Propofol/Propofol-Prefix.pch";
-				INFOPLIST_FILE = "PropofolTests/PropofolTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		22C15998160DD3570067B4A5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Propofol.app/Propofol";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Propofol/Propofol-Prefix.pch";
-				INFOPLIST_FILE = "PropofolTests/PropofolTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		22739974160F13CA00DA07D5 /* Build configuration list for PBXNativeTarget "PropofolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22739975160F13CA00DA07D5 /* Debug */,
+				22739976160F13CA00DA07D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		22C15954160DD3560067B4A5 /* Build configuration list for PBXProject "propofol" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -577,20 +596,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		22C15993160DD3570067B4A5 /* Build configuration list for PBXNativeTarget "Propofol" */ = {
+		22C15993160DD3570067B4A5 /* Build configuration list for PBXNativeTarget "propofol.temp_caseinsensitive_rename" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22C15994160DD3570067B4A5 /* Debug */,
 				22C15995160DD3570067B4A5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		22C15996160DD3570067B4A5 /* Build configuration list for PBXNativeTarget "PropofolTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				22C15997160DD3570067B4A5 /* Debug */,
-				22C15998160DD3570067B4A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
