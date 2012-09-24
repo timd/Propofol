@@ -11,8 +11,6 @@
 		22739967160F13CA00DA07D5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C15982160DD3570067B4A5 /* SenTestingKit.framework */; };
 		22739968160F13CA00DA07D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C1595E160DD3570067B4A5 /* UIKit.framework */; };
 		22739969160F13CA00DA07D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C15960160DD3570067B4A5 /* Foundation.framework */; };
-		2273996F160F13CA00DA07D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2273996D160F13CA00DA07D5 /* InfoPlist.strings */; };
-		22739972160F13CA00DA07D5 /* PropofolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22739971160F13CA00DA07D5 /* PropofolTests.m */; };
 		22739977160F13D700DA07D5 /* CMCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C159AA160DDE480067B4A5 /* CMCalculator.m */; };
 		2293548D160F19ED003E4B14 /* algorithm_test.py in Resources */ = {isa = PBXBuildFile; fileRef = 2293548B160F19ED003E4B14 /* algorithm_test.py */; };
 		2293548E160F19ED003E4B14 /* algorithm.py in Resources */ = {isa = PBXBuildFile; fileRef = 2293548C160F19ED003E4B14 /* algorithm.py */; };
@@ -35,6 +33,7 @@
 		22E89E41160E0268003896C6 /* CMGraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E89E3F160E0268003896C6 /* CMGraphView.xib */; };
 		22E89E5B160E0318003896C6 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E89E5A160E0311003896C6 /* libCorePlot-CocoaTouch.a */; };
 		22E89E5D160E0370003896C6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E89E5C160E0370003896C6 /* QuartzCore.framework */; };
+		22F7BF9D161057EA00F3D6B1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 22F7BF9C161057EA00F3D6B1 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,11 +50,6 @@
 		2273993F160EF5E300DA07D5 /* CMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBaseViewController.h; sourceTree = "<group>"; };
 		22739940160EF5E300DA07D5 /* CMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBaseViewController.m; sourceTree = "<group>"; };
 		22739966160F13CA00DA07D5 /* PropofolTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PropofolTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2273996C160F13CA00DA07D5 /* PropofolTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PropofolTests-Info.plist"; sourceTree = "<group>"; };
-		2273996E160F13CA00DA07D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		22739970160F13CA00DA07D5 /* PropofolTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropofolTests.h; sourceTree = "<group>"; };
-		22739971160F13CA00DA07D5 /* PropofolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropofolTests.m; sourceTree = "<group>"; };
-		22739973160F13CA00DA07D5 /* PropofolTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PropofolTests-Prefix.pch"; sourceTree = "<group>"; };
 		2293548B160F19ED003E4B14 /* algorithm_test.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = algorithm_test.py; sourceTree = SOURCE_ROOT; };
 		2293548C160F19ED003E4B14 /* algorithm.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = algorithm.py; sourceTree = SOURCE_ROOT; };
 		22C1595A160DD3560067B4A5 /* propofol.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = propofol.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +85,7 @@
 		22E89E3F160E0268003896C6 /* CMGraphView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMGraphView.xib; sourceTree = "<group>"; };
 		22E89E50160E0311003896C6 /* CorePlot-CocoaTouch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CorePlot-CocoaTouch.xcodeproj"; path = "Frameworks/CorePlot/CorePlot-CocoaTouch.xcodeproj"; sourceTree = "<group>"; };
 		22E89E5C160E0370003896C6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		22F7BF9C161057EA00F3D6B1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,33 +123,13 @@
 			name = "Base classes";
 			sourceTree = "<group>";
 		};
-		2273996A160F13CA00DA07D5 /* PropofolTests */ = {
-			isa = PBXGroup;
-			children = (
-				22739970160F13CA00DA07D5 /* PropofolTests.h */,
-				22739971160F13CA00DA07D5 /* PropofolTests.m */,
-				2273996B160F13CA00DA07D5 /* Supporting Files */,
-			);
-			path = PropofolTests;
-			sourceTree = "<group>";
-		};
-		2273996B160F13CA00DA07D5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2273996C160F13CA00DA07D5 /* PropofolTests-Info.plist */,
-				2273996D160F13CA00DA07D5 /* InfoPlist.strings */,
-				22739973160F13CA00DA07D5 /* PropofolTests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		22C1594F160DD3560067B4A5 = {
 			isa = PBXGroup;
 			children = (
+				22F7BF9C161057EA00F3D6B1 /* README.md */,
 				22E89E50160E0311003896C6 /* CorePlot-CocoaTouch.xcodeproj */,
 				22C15964160DD3570067B4A5 /* Propofol */,
 				22C15988160DD3570067B4A5 /* PropofolTests */,
-				2273996A160F13CA00DA07D5 /* PropofolTests */,
 				22C1595D160DD3570067B4A5 /* Frameworks */,
 				22C1595B160DD3560067B4A5 /* Products */,
 			);
@@ -184,6 +159,7 @@
 		22C15964160DD3570067B4A5 /* Propofol */ = {
 			isa = PBXGroup;
 			children = (
+				22F7BF9A161057A600F3D6B1 /* Assets */,
 				22C15999160DD3D60067B4A5 /* App delegate */,
 				22C159A8160DDE2F0067B4A5 /* Calculator */,
 				22C1599A160DD3E20067B4A5 /* Front end */,
@@ -199,9 +175,6 @@
 				22C15967160DD3570067B4A5 /* InfoPlist.strings */,
 				22C1596A160DD3570067B4A5 /* main.m */,
 				22C1596C160DD3570067B4A5 /* propofol.temp_caseinsensitive_rename-Prefix.pch */,
-				22C15970160DD3570067B4A5 /* Default.png */,
-				22C15972160DD3570067B4A5 /* Default@2x.png */,
-				22C15974160DD3570067B4A5 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -296,6 +269,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		22F7BF9A161057A600F3D6B1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				22F7BF9B161057B000F3D6B1 /* App-wide */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		22F7BF9B161057B000F3D6B1 /* App-wide */ = {
+			isa = PBXGroup;
+			children = (
+				22C15970160DD3570067B4A5 /* Default.png */,
+				22C15972160DD3570067B4A5 /* Default@2x.png */,
+				22C15974160DD3570067B4A5 /* Default-568h@2x.png */,
+			);
+			name = "App-wide";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -383,7 +374,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2273996F160F13CA00DA07D5 /* InfoPlist.strings in Resources */,
 				2293548D160F19ED003E4B14 /* algorithm_test.py in Resources */,
 				2293548E160F19ED003E4B14 /* algorithm.py in Resources */,
 			);
@@ -400,6 +390,7 @@
 				22C1597B160DD3570067B4A5 /* CMVitalsView.xib in Resources */,
 				22C159A1160DD8FC0067B4A5 /* CMConcentrationView.xib in Resources */,
 				22E89E41160E0268003896C6 /* CMGraphView.xib in Resources */,
+				22F7BF9D161057EA00F3D6B1 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +418,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				22739977160F13D700DA07D5 /* CMCalculator.m in Sources */,
-				22739972160F13CA00DA07D5 /* PropofolTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,14 +439,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2273996D160F13CA00DA07D5 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2273996E160F13CA00DA07D5 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		22C15967160DD3570067B4A5 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
