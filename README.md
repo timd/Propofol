@@ -29,10 +29,10 @@ This is a very rough alpha version and should not be used in a clinical scenario
 
 ## Model classes
 
-* `CMCalculator` - implements calculation methods:
-** newPatientWithAge:andWeight:andHeight:andMale: - creates new patient
-** giveDrugWithQuantity:withState: - adds drug to current patient
-** waitTime:withState: - models Ce concentration based on time interval
+`CMCalculator` - implements calculation methods:
+* newPatientWithAge:andWeight:andHeight:andMale: - creates new patient
+* giveDrugWithQuantity:withState: - adds drug to current patient
+* waitTime:withState: - models Ce concentration based on time interval
 
 # To do
 
