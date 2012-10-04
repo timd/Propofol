@@ -10,6 +10,18 @@
 
 @implementation CMCalculator
 
++(id)sharedCalculator {
+    
+    static CMCalculator *sharedCalculator = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedCalculator = [[self alloc] init];
+    });
+    
+    return sharedCalculator;
+    
+}
+
 -(id)init {
     
     if (self = [super init]) {

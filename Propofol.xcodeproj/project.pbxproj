@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2239F952161D97050017F870 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2239F94E161D97050017F870 /* libTestFlight.a */; };
+		2239F953161D97050017F870 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2239F94F161D97050017F870 /* README.md */; };
+		2239F954161D97050017F870 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 2239F950161D97050017F870 /* release_notes.md */; };
+		2239F956161D972F0017F870 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2239F955161D972F0017F870 /* libz.dylib */; };
 		22739941160EF5E300DA07D5 /* CMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22739940160EF5E300DA07D5 /* CMBaseViewController.m */; };
 		22C1595F160DD3570067B4A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C1595E160DD3570067B4A5 /* UIKit.framework */; };
 		22C15961160DD3570067B4A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C15960160DD3570067B4A5 /* Foundation.framework */; };
@@ -52,9 +56,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2239F94E161D97050017F870 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		2239F94F161D97050017F870 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		2239F950161D97050017F870 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		2239F951161D97050017F870 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		2239F955161D972F0017F870 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		2273993F160EF5E300DA07D5 /* CMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBaseViewController.h; sourceTree = "<group>"; };
 		22739940160EF5E300DA07D5 /* CMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBaseViewController.m; sourceTree = "<group>"; };
-		22C1595A160DD3560067B4A5 /* Propofol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Propofol.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C1595A160DD3560067B4A5 /* propofol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = propofol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C1595E160DD3570067B4A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		22C15960160DD3570067B4A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		22C15962160DD3570067B4A5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,11 +104,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2239F956161D972F0017F870 /* libz.dylib in Frameworks */,
 				22E89E5D160E0370003896C6 /* QuartzCore.framework in Frameworks */,
 				22E89E5B160E0318003896C6 /* libCorePlot-CocoaTouch.a in Frameworks */,
 				22C1595F160DD3570067B4A5 /* UIKit.framework in Frameworks */,
 				22C15961160DD3570067B4A5 /* Foundation.framework in Frameworks */,
 				22C15963160DD3570067B4A5 /* CoreGraphics.framework in Frameworks */,
+				2239F952161D97050017F870 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +127,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2239F94D161D97050017F870 /* TestFlightSDK1 */ = {
+			isa = PBXGroup;
+			children = (
+				2239F94E161D97050017F870 /* libTestFlight.a */,
+				2239F94F161D97050017F870 /* README.md */,
+				2239F950161D97050017F870 /* release_notes.md */,
+				2239F951161D97050017F870 /* TestFlight.h */,
+			);
+			path = TestFlightSDK1;
+			sourceTree = "<group>";
+		};
 		2273993E160EF5C400DA07D5 /* Base classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,8 +150,10 @@
 		22C1594F160DD3560067B4A5 = {
 			isa = PBXGroup;
 			children = (
+				2239F955161D972F0017F870 /* libz.dylib */,
 				22E89E50160E0311003896C6 /* CorePlot-CocoaTouch.xcodeproj */,
 				22C15964160DD3570067B4A5 /* Propofol */,
+				2239F94D161D97050017F870 /* TestFlightSDK1 */,
 				22C15988160DD3570067B4A5 /* PropofolTests */,
 				22C1595D160DD3570067B4A5 /* Frameworks */,
 				22C1595B160DD3560067B4A5 /* Products */,
@@ -139,7 +163,7 @@
 		22C1595B160DD3560067B4A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				22C1595A160DD3560067B4A5 /* Propofol.app */,
+				22C1595A160DD3560067B4A5 /* propofol.app */,
 				22C15981160DD3570067B4A5 /* PropofolTests.octest */,
 			);
 			name = Products;
@@ -273,9 +297,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		22C15959160DD3560067B4A5 /* Propofol */ = {
+		22C15959160DD3560067B4A5 /* propofol */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 22C15993160DD3570067B4A5 /* Build configuration list for PBXNativeTarget "Propofol" */;
+			buildConfigurationList = 22C15993160DD3570067B4A5 /* Build configuration list for PBXNativeTarget "propofol" */;
 			buildPhases = (
 				22C15956160DD3560067B4A5 /* Sources */,
 				22C15957160DD3560067B4A5 /* Frameworks */,
@@ -285,9 +309,9 @@
 			);
 			dependencies = (
 			);
-			name = Propofol;
+			name = propofol;
 			productName = Propofol;
-			productReference = 22C1595A160DD3560067B4A5 /* Propofol.app */;
+			productReference = 22C1595A160DD3560067B4A5 /* propofol.app */;
 			productType = "com.apple.product-type.application";
 		};
 		22C15980160DD3570067B4A5 /* PropofolTests */ = {
@@ -337,7 +361,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				22C15959160DD3560067B4A5 /* Propofol */,
+				22C15959160DD3560067B4A5 /* propofol */,
 				22C15980160DD3570067B4A5 /* PropofolTests */,
 			);
 		};
@@ -365,6 +389,8 @@
 				22C1597B160DD3570067B4A5 /* CMVitalsView.xib in Resources */,
 				22C159A1160DD8FC0067B4A5 /* CMConcentrationView.xib in Resources */,
 				22E89E41160E0268003896C6 /* CMGraphView.xib in Resources */,
+				2239F953161D97050017F870 /* README.md in Resources */,
+				2239F954161D97050017F870 /* release_notes.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +449,7 @@
 /* Begin PBXTargetDependency section */
 		22C15987160DD3570067B4A5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 22C15959160DD3560067B4A5 /* Propofol */;
+			target = 22C15959160DD3560067B4A5 /* propofol */;
 			targetProxy = 22C15986160DD3570067B4A5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -508,12 +534,19 @@
 		22C15994160DD3570067B4A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Propofol/Propofol-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/CorePlot/**";
 				INFOPLIST_FILE = "Propofol/Propofol-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK1\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -521,12 +554,19 @@
 		22C15995160DD3570067B4A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tim Duckett";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Propofol/Propofol-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/CorePlot/**";
 				INFOPLIST_FILE = "Propofol/Propofol-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK1\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F6BAD32F-61A4-4B58-A5DC-5ED672496EB6";
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -577,7 +617,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		22C15993160DD3570067B4A5 /* Build configuration list for PBXNativeTarget "Propofol" */ = {
+		22C15993160DD3570067B4A5 /* Build configuration list for PBXNativeTarget "propofol" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22C15994160DD3570067B4A5 /* Debug */,

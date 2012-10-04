@@ -16,6 +16,7 @@
 @property (nonatomic) int gender;
 @property (nonatomic) float targetConcentration;
 
++(id)sharedCalculator;
 -(void)logValues;
 
 @end

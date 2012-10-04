@@ -18,6 +18,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    [TestFlight takeOff:@"ecf21f01ecd1ebdea4482c87d38851e1_MTM1MTIwMjAxMi0wOS0yNCAwNTo0NDoyMy4yNTIyNjk"];
 
     CMVitalsViewController *vitalsController = [[CMVitalsViewController alloc] initWithNibName:@"CMVitalsView" bundle:nil];
     CMBaseNavController *navController = [[CMBaseNavController alloc] initWithRootViewController:vitalsController];

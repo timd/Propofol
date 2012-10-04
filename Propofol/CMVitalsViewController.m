@@ -33,8 +33,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     // Create and load calculator
-    self.calculator = [[CMCalculator alloc] init];
-    
+    self.calculator = [CMCalculator sharedCalculator];
     
     // Setup basic stats source data
     self.ageArray = [[NSMutableArray alloc] init];
